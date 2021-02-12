@@ -10,7 +10,7 @@ import java.util.*;
 class ride {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("ride.in"));
-        PrintWriter pw = new PrintWriter(new FileWriter("ride.out"));
+        PrintWriter out = new PrintWriter(new FileWriter("ride.out"));
 
         char[] comet = br.readLine().toCharArray();
         char[] group = br.readLine().toCharArray();
@@ -27,11 +27,8 @@ class ride {
         if (cometSum % 47 == groupSum % 47) {
             pw.println("GO");
         } else {
-            pw.println("STAY");
+            out.println("STAY");
+            out.close();
         }
-
-        pw.close();
-        br.close();
-
     }
 }
